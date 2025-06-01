@@ -1,0 +1,12 @@
+# Magma Session Manager Configuration
+sessiond:
+  log_level: info
+  relay_enabled: false
+  gy_relay_enabled: true
+
+online_charging:
+  enable: true
+  server_addr: "ocs"
+  server_port: 3868
+  service_context_id: "magma@demo.ocs"
+  requested_units: 5000000  # 5MB initial quota
