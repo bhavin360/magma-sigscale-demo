@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  ocs:
+    image: erlang:25-alpine
+    command: sh -c "git clone https://github.com/sigscale/ocs.git /app && cd /app && make && ./bin/ocs start"
+    volumes:
+      - ./diameter.cfg:/app/etc/diameter.cfg
+      - ./rating.config:/app/etc/rating.config
+    ports:
+      - "8080:8080" # Web interface if enabled
+    networks:
+      - magma-ocs-net
+    depends_on:
+      - magma-sessiond
+
+networks:
+  magma-ocs-net:
+    external: true
