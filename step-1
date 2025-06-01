@@ -1,0 +1,11 @@
+├── 📂 magma-config
+│   ├── sessiond.yml
+│   └── docker-compose.yml
+├── 📂 ocs-config
+│   ├── diameter.cfg
+│   ├── rating.config
+│   └── docker-compose.yml
+├── 📂 test-scripts
+│   ├── simulate_traffic.py
+│   └── README.md
+└── 📜 README.md
